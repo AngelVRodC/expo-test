@@ -1,11 +1,32 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
+import { Router, Scene } from 'react-native-router-flux';
+import HomeScreen from './HomeScreen/HomeScreen';
+import { Container, Header, Title, Left, Icon, Right, Button, Body, Content,Text, Card, CardItem } from "native-base";
 
-export default function App() {
+ const App = ()  => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
+    <Container>
+    <Header>
+    <Left>
+      <Button
+        transparent
+        onPress={() => console.log('open')}>
+        <Icon name="menu" />
+      </Button>
+    </Left>
+    <Body>
+        <Title>HomeScreen</Title>
+    </Body>
+    <Right />
+  </Header>
+      <Router >
+      <Scene key="root">
+      <Scene key="Listado de Usuarios" component={HomeScreen} initial={true} hideNavBar={true} />
+      <Scene key="Crear Usuario" component={HomeScreen} title="PageTwo" hideNavBar={true} />
+      </Scene>
+    </Router>
+    </Container>
   );
 }
 
@@ -17,3 +38,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default App;
