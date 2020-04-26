@@ -1,4 +1,4 @@
-import UserListPage from '../pages/users/UsersList';
+import UserListPage from '../components/pages/users/UsersList';
 
 interface IRoute {
   path: string;
