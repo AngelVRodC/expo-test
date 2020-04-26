@@ -1,4 +1,7 @@
-export const setMenuState = (payload: MenuState): MenuActionType => ({
+export const openMenu = (): MenuActionType => ({
   type: '@@MENU/IS_OPEN',
-  payload,
+});
+
+export const closeMenu = (): MenuActionType => ({
+  type: '@@MENU/IS_CLOSE',
 });

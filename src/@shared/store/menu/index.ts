@@ -10,6 +10,12 @@ const initialState: MenuState = {
       case '@@MENU/IS_OPEN': {
         return {
           ...state,
+          isOpen: true
+        };
+      }
+      case '@@MENU/IS_CLOSE': {
+        return {
+          isOpen: false
         };
       }
       default: return initialState;

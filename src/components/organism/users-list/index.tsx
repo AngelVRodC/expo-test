@@ -11,7 +11,7 @@ const List = () => {
 }
 
 const UserList = () => {
-  return <BaseLayout header={<Header />} content={<List />} />;
+  return <BaseLayout content={<List />} />;
 };
 
 export default UserList;
