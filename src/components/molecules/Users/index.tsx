@@ -1,5 +1,4 @@
 
-
 import React from 'react';
 import { Content, Card, CardItem, Left, Thumbnail, Body,Text, List, ListItem } from 'native-base';
 
@@ -15,7 +14,7 @@ interface IPropsUsers {
 // TODO: split components in Atoms
 const UserCard = ({ user }: IPropsUser) => {
   return (
-    <ListItem key={user.id}>
+    <ListItem>
     <Content>
     <Card style={{flex: 0}}>
       <CardItem>
@@ -23,7 +22,7 @@ const UserCard = ({ user }: IPropsUser) => {
           <Thumbnail source={{uri: user.avatar}} />
           <Body>
             <Text>{user.first_name} {user.last_name}</Text>
-            <Text note>{user.email}</Text>
+            <Text>{user.email}</Text>
           </Body>
         </Left>
       </CardItem>
@@ -34,11 +33,10 @@ const UserCard = ({ user }: IPropsUser) => {
 };
 
 export const UserCards = ({ users }: IPropsUsers) => {
-  console.log(users)
   return (<Content>
     <List>
     {users.map((user) =>
-      <UserCard user={user} />
+      <UserCard user={user} key={user.id}/>
     )}
      </List>
   </Content>)

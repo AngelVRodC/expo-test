@@ -10,13 +10,12 @@ const initialState: UsersState = {
   ) => {
     switch (action.type) {
       case '@@USERS/LIST': {
-        console.log(action.payload);
         return {
           ...state,
           users: action.payload || []
         };
       }
-      default: return initialState;
+      default: return { ...state };
     }
   }
   

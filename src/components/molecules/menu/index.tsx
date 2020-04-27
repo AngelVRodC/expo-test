@@ -14,6 +14,7 @@ const SideBar = () => {
         renderRow={(data) => {
           return (
             <ListItem
+                key={data.path}
                 button
                 onPress={() => Actions.jump(data.key)}>
               <Text>{data.key}</Text>

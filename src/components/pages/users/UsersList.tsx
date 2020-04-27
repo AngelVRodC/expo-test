@@ -2,8 +2,8 @@ import React from 'react';
 import UserList from '../../organism/users-list/index';
 
 
-const UserListPage = () => {
+const ListUsersPage = () => {
   return <UserList />;
 };
 
-export default UserListPage;
+export default ListUsersPage;
