@@ -8,10 +8,11 @@ import { closeMenu } from '../../../@shared/store/menu/actions';
 
 interface BaseLayoutProps {
   content: ReactElement;
+  title: string;
 }
 
 // Default Layout with Drawer menu
-export const BaseLayout = ({ content }: BaseLayoutProps) => {
+export const BaseLayout = ({ content, title }: BaseLayoutProps) => {
   const isOpen = useSelector(getMenuState);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -25,7 +26,7 @@ export const BaseLayout = ({ content }: BaseLayoutProps) => {
         open={isOpen}
         onClose={() => dispatch(closeMenu())}
         >
-        <Header />
+        <Header title={title}/>
         <Body>
           {content}
         </Body>

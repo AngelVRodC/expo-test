@@ -3,6 +3,8 @@ import { Container, Content, Text, List, ListItem } from "native-base";
 import { routes } from '../../../routes/routes-list';
 import {Actions} from 'react-native-router-flux';
 
+
+// TODO: split components in Atoms
 const SideBar = () => {
   return (
     <Container>
