@@ -18,7 +18,7 @@ const initialState: MenuState = {
           isOpen: false
         };
       }
-      default: return initialState;
+      default: return state;
     }
   }
   

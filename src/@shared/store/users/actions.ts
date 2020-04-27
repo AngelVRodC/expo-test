@@ -1,9 +1,18 @@
+import * as api from '../../api';
 
+// TODO: Handler Errors
 export const getUsers = async (dispatch: any) => {
-  const response = await fetch('https://reqres.in/api/users');
-  const jsonResponse: GetUsersResponse = await response.json();
+  
+  const response = await api.getUsers();
+
   dispatch ({
     type: '@@USERS/LIST',
-    payload: jsonResponse.data,
+    payload: response.data,
   });
 }
+
+export const createUser = async (user: CreateUserRequest) => {
+  
+  return api.createUser(user);
+}
+

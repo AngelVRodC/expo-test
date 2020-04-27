@@ -13,3 +13,16 @@ interface GetUsersResponse {
   total_pages: number;
   data: User[];
 }
+
+interface CreateUserRequest {
+  name: string;
+  job: string;
+}
+
+
+interface CreateUserResponse {
+  id: string;
+  name: string;
+  job: string;
+  createdAt: string;
+}

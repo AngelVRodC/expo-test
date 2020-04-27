@@ -1,3 +1,3 @@
-export function getMenuState(state: ReduxStore) {
+export const getMenuState = (state: ReduxStore) => {
   return state.menu.isOpen;
 }

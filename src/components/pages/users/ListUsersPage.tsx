@@ -1,5 +1,5 @@
 import React from 'react';
-import UserList from '../../organism/users-list/index';
+import UserList from '../../organism/users/list';
 
 
 const ListUsersPage = () => {
